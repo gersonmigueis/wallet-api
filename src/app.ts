@@ -1,14 +1,14 @@
 import * as express from 'express';
 import * as cors from 'cors';
 import { conectarNoBanco } from './config/db';
-import routerConta from './routes/contas';
+import routes from './routes';
 
-export const app = express();
+const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use('/conta', routerConta);
+app.use(routes);
 app.use('/', (req, res) => res.send('API UP!'));
 
 conectarNoBanco();
-
+export default app;
