@@ -1,6 +1,6 @@
 import { Router } from 'express'; 
 import ContasController from '../controller/ContaController';
-import { Conta } from '../entity/Conta';
+import {Conta} from '../entity/Conta';
 const contasController = new ContasController();
 const contasRouter = Router();
 
